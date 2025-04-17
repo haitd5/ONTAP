@@ -1,24 +1,38 @@
 // 1. creater array
 function createArray(size) {
-    const numbers = [];
+    // const numbers = [];
+    let numbers = new Array(size);
+    let min = 10;
+    let max = 60;
     for (let i = 0; i < size; i++) {
-        numbers.push(Math.floor(Math.random() * (60 - 10 + 1)) + 10);
+        // numbers.push(Math.floor(Math.random() * (max - min + 1)) + min);
+        numbers[i] = Math.floor(Math.random() * (max - min + 1) + min);
     }
     return numbers;
 }
 // 2. hien thi array
 function displayArray(numbers) {
     console.log("Mang number:", numbers);
+    // for (let item of numbers) {
+    //     console.log(item);
+    // }
 }
 
 // 3. ham dem so chan
 
 function countEven(numbers) {
     let evenCount = 0;
-    for (let i = 0; i < numbers.length; i++) {
+    // for (let i = 0; i < numbers.length; i++) {
+    //     if (numbers[i] % 2 === 0) {
+    //         evenCount++;
+    //     }
+    // }
+    let i = 0;
+    while (i < numbers.length) {
         if (numbers[i] % 2 === 0) {
             evenCount++;
         }
+        i++;
     }
     return evenCount;
 }
@@ -48,7 +62,12 @@ function countPrime(numbers) {
 // 5. tinh tong cac phan tu
 
 function sumArray(numbers) {
-    return numbers.reduce((sum, num) => sum + num, 0);
+    // return numbers.reduce((sum, num) => sum + num, 0);
+    let total = 0;
+    for (let number of numbers) {
+        total += number;
+    }
+    console.log(`Total of value in array is: ${total}`);
 }
 //
 const size = 10;
@@ -56,5 +75,6 @@ const numbers = createArray(size);
 
 displayArray(numbers);
 console.log("so luong so chan: ", countEven(numbers));
-console.log("So luong so nguyen to: ", countPrime(numbers));
-console.log("Tong cac phan tu trong mang: ", sumArray(numbers));
+sumArray(numbers);
+// console.log("So luong so nguyen to: ", countPrime(numbers));
+// console.log("Tong cac phan tu trong mang: ", sumArray(numbers));
