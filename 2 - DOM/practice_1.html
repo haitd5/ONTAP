@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table,
+        tr,
+        td {
+            border-collapse: collapse;
+            border: 1px solid black;
+        }
+
+        #search {
+            text-decoration: underline;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <table>
+        <tbody>
+            <tr>
+                <td>Nhap tieu de</td>
+                <td>
+                    <input type="text"><br>
+                    <a id="search" onclick="searchAdvanced()">Tim kiem nang cao</a>
+                </td>
+            </tr>
+            <tr style="display: none;">
+                <td>Chon chuyen de</td>
+                <td>
+                    <select>
+                        <option value="">PHP</option>
+                        <option value="">JAVA</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>
+                    <button>tim kiem</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <script>
+        function searchAdvanced() {
+            if (document.getElementById('search').innerText === 'Tim kiem nang cao') {
+                document.querySelector('table>tbody>tr:nth-child(2)').style.display = 'table-row'
+                document.getElementById('search').innerText = 'Bo tim kiem nang cao'
+
+            } else {
+                document.querySelector('table>tbody>tr:nth-child(2)').style.display = 'none'
+                document.getElementById('search').innerText = 'Tim kiem nang cao'
+            }
+        }
+    </script>
+</body>
+
+</html>

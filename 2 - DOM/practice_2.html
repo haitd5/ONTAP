@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table,
+        tr,
+        td {
+            border-collapse: collapse;
+            border: 1px solid black;
+        }
+    </style>
+</head>
+
+<body>
+    <table>
+        <tbody>
+            <tr>
+                <td>Tieu de thu 1</td>
+                <td>
+                    <button>delete</button>
+                </td>
+            </tr>
+            <tr>
+                <td>Tieu de thu 2</td>
+                <td>
+                    <button>delete</button>
+                </td>
+            </tr>
+            <tr>
+                <td>Tieu de thu 3</td>
+                <td>
+                    <button>delete</button>
+                </td>
+            </tr>
+            <tr>
+                <td>Tieu de thu 4</td>
+                <td>
+                    <button>delete</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <script>
+        window.onload = function () {
+            let buttonList = document.getElementsByTagName('button')
+            for (let button of buttonList) {
+                button.addEventListener('click', function () {
+                    // console.log(this.parentElement.parentElement);
+                    this.parentElement.parentElement.remove()
+
+                })
+            }
+        }
+    </script>
+</body>
+
+</html>
