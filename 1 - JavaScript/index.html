@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Methods</title>
+</head>
+
+<body>
+    <script>
+        let jobs = ["java", "ruby", "PHP", "JS"];
+        let htmls = jobs.map(function (value, index) {
+            return `<button>${value}</button>`
+        })
+        document.write(htmls.join(""));
+
+    </script>
+</body>
+
+</html>
