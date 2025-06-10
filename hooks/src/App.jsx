@@ -3,7 +3,9 @@ import "./App.css";
 function App() {
     return (
         <>
-            <div className="container">Wellcom to React</div>
+            <div className="container">
+                <h1>Wellcom to React</h1>
+            </div>
         </>
     );
 }
