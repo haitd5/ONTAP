@@ -9,10 +9,15 @@ import TwoWayBinding from "./components/TwoWayBinding.jsx";
 import TwoWayBindingFormSubmit from "./components/TwoWayBindingFormSubmit.jsx";
 import TwoWayBindingFormSubmit2 from "./components/TwoWayBindingFormSubmit2.jsx";
 import TwoWayBindingFormSubmit3 from "./components/TwoWayBindingFormSubmit3.jsx";
+import InitStateCallback from "./components/InitStateCallback.jsx";
+import PlayListApp from "./components/PlayList/PlayListApp.jsx";
+import React from "react";
+import { ToastContainer } from "react-toastify";
 
 createRoot(document.getElementById("root")).render(
     <StrictMode>
         <App />
-        <TwoWayBindingFormSubmit3 />
+        <ToastContainer theme="colored" position="top-left" />
+        <PlayListApp />
     </StrictMode>
 );
